@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: spark-control-pod
+    labels: 
+        app: spark_control
+spec:
+    containers:
+    - name: spark-control-container
+      image: spark_control
+      imagePullPolicy: Never
