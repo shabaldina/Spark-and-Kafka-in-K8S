@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: python-download-pod
+    labels: 
+        app: python_download
+spec:
+    containers:
+    - name: python-download-container
+      image: python_download
+      imagePullPolicy: Never
