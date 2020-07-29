@@ -24,7 +24,7 @@ The aim of the project is to provide an correlative illustration between the ind
 * PySpark App access the new arrived data and stored the results in MySQL Database 
 * Web Server queries data from database via API
 * Memchached server caches executed queries
-* The results of the queries are displayed in the GUI
+* The GUI implementation is not a part of this repo
 
 
 ## Installation guide <a name="install"></a>
