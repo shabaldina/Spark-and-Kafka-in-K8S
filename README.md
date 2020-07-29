@@ -1,13 +1,13 @@
 ## Apache Spark & Kafka on K8S
 
-This prototyp platform was developed as a part of the study project https://github.com/Thuridus/Big-Data 
+* This prototyp platform was developed as a part of the study project https://github.com/Thuridus/Big-Data 
 
-The Lambda architecture was chosen for the proptytp.
+* The Lambda architecture was chosen for the proptytp.
 For pros and cons regarding Lambda and Kappa architecture refer to e.g  https://towardsdatascience.com/a-brief-introduction-to-two-data-processing-architectures-lambda-and-kappa-for-big-data-4f35c28005bb
 
 The aim of the project is to provide an correlative illustration between the index "Deutsche Aktien Index" (DAX) and the COVID-19 infections or deaths.
-*The data about COVID-19 infections is taken from https://opendata.ecdc.europa.eu/covid19
-*The Frankfurt Stock Exchange data https://www.quandl.com/data/FSE-Frankfurt-Stock-Exchange
+* The data about COVID-19 infections is taken from https://opendata.ecdc.europa.eu/covid19
+* The Frankfurt Stock Exchange data https://www.quandl.com/data/FSE-Frankfurt-Stock-Exchange
 
 
 
@@ -89,7 +89,7 @@ Apply Kafka Cluster Deployment
 kubectl apply -f kafka-cluster-def.yaml
 ```
 
-## Deploy HDFS on K8S: <a name="k8s"></a>
+### Deploy HDFS on K8S: <a name="k8s"></a>
 ### Deploying HDFS 
 Execute the following commands to install the apache hadoop distributed filesystem component.
 Alternatively run 'sh install_hdfs.sh' in the ../python_hdfs folder to install whole hdfs component.
@@ -153,7 +153,7 @@ Create a POD and deploy it to minikube
 ```
 kubectl apply -f my-memcache-deployment.yml
 ```
-## Deploy Spark on K8S <a name="sparkk8s"></a>
+### Deploy Spark on K8S <a name="sparkk8s"></a>
 ### Spark Operator
 Execute the following commands to install pyspark.
 Alternatively run 'sh install_pyspark.sh' in the ../pyspark-app folder to install whole pyspark component.
@@ -189,24 +189,3 @@ docker build -t spark_control .
 kubectl apply -f spark_control_deployment.yml
 ```
 
-## Start User-Interface <a name="deployinterface"></a>
-
-Check if service is running on minikube
-```
-minikube dashboard
-```
-
-Navigate to /app/
-```
-cd ../app/
-```
-
-Build Interface-Dockerfile and run interface-deployment
-```
-docker build -t interface .
-```
-
-Run interface-Deployment
-```
-kubectl apply -f interface-deployment.yml
-```
