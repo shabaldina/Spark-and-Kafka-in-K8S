@@ -35,25 +35,10 @@ This application is intended to be used on based Ubuntu-OS, but was successfully
 ```
 minikube
 helm
-```
-
-### Automatic Installation
-Installation scripts cab be used to install and deinstall the prototyp platform
-
-The Base-Directory contains a script to setup the whole environment.
-There has to be a empty minikube cluster with Ingress-Addon enabled on your system. [Start Minikube](#minikube)
-After minikube has started, execute the installation script.
-```
-sh install_system.sh
-```
-To deinstall the prototyp
-```
-sh uninstall_system.sh
+python 3
 ```
 
 ### Manual installation
-Alternatively this system can be installed by executing the necessary commands manually.
-The following sections contain the commands that need to be executed to start the components.
 The components need to be started in the following order:
 1. [Start Minikube](#minikube)
 2. [Kafka Cluster](#kafkacluster)
@@ -63,7 +48,6 @@ The components need to be started in the following order:
 6. [User-Interface](#deployinterface)
 
 ### Starting minikube <a name="minikube"></a>
-
 Start minikube with driver depending on your OS.
 ```
 #on Win 10
